@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Valen Voss — AI Video Creator \u0026 Visual Artist",
+  "description": "Premium personal portfolio for Valen Voss, AI Video Creator and Visual Artist crafting cinematic commercials, luxury product visuals, and brand storytelling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

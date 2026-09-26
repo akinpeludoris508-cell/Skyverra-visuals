@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html, body {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+.font-display,
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body,
+.font-subtext,
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.5);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rotateLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-rotate-ltr {
+  display: flex;
+  width: max-content;
+  animation: rotateLeftToRight 36s linear infinite;
+}
+
+.animate-rotate-ltr:hover,
+.animate-rotate-ltr.is-paused {
+  animation-play-state: paused;
+}
+
