@@ -1,6 +1,7 @@
 import React from 'react';
-import { Instagram, Play } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import skyverraLogo from '../assets/images/skyverra_logo_1790435929054.jpg';
 
 export const Footer: React.FC = () => {
   const { theme } = useTheme();
@@ -31,10 +32,12 @@ export const Footer: React.FC = () => {
             onClick={(e) => handleNavClick(e, '#home')}
             className="flex items-center gap-3.5 group cursor-pointer focus:outline-none"
           >
-            {/* Play Button Icon in vibrant cyan */}
-            <div className="w-9 h-9 rounded-xl bg-[#38BDF8] flex items-center justify-center shadow-[0_0_15px_rgba(56,189,248,0.4)] group-hover:scale-105 transition-transform duration-200">
-              <Play className="w-4 h-4 text-[#05070A] fill-current translate-x-0.5" />
-            </div>
+            {/* Skyverra SV Logo Image */}
+            <img
+              src={skyverraLogo}
+              alt="Skyverra Visuals Logo"
+              className="w-10 h-10 rounded-xl object-contain shadow-[0_0_18px_rgba(56,189,248,0.45)] transition-transform duration-300 group-hover:scale-105 border border-white/10"
+            />
             <div className="flex flex-col">
               <span className="font-heading font-extrabold text-lg text-white tracking-tight leading-tight group-hover:text-[#38BDF8] transition-colors">
                 Skyverra Visuals
